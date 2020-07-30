@@ -1,8 +1,25 @@
 package arrays;
 
+import java.awt.AWTException;
+import java.util.Random;
+
+import org.jointheleague.graphical.robot.Robot;
+
 public class _01_RobotRace {
 	//1. make a main method
-
+public static void main(String[] args) {
+	Robot[] robs = new Robot[5];
+	for (int i = 0; i < robs.length; i++) {
+		robs[i] = new Robot();
+		robs[i].setY(500);
+		robs[i].setX(i * 150);
+	}
+	Random rnd = new Random();
+	for (int i = 0; i < robs.length; i++) {
+		robs[i].move(rnd.nextInt(50));
+	}
+	
+}
 	//2. create an array of 5 robots.
 
 	//3. use a for loop to initialize the robots.
